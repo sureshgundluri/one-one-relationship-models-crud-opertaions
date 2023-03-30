@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr th
+        {
+            color:blue;
+        }
+        table
+        {
+            border-color:green;
+            background-color: yellow;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>details_countries</h1>
+    <table border="5px" cellpadding="5px" >
+        <tr>
+            <th>c_code</th>
+            <th>c_name</th>
+            <th>c_population</th>
+            <th>c_king</th>
+        </tr>
+        {% for a in data %}
+            <tr><td>{{a.c_code}}</td>
+                <td>{{a.c_name}}</td>
+                <td>{{a.c_population}}</td>
+                <td>{{a.c_king}}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+    </center>
+</body>
+</html>
